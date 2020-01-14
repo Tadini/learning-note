@@ -1,4 +1,6 @@
 ```
-function P
+const Promise = function Promise (resolve, reject) {
+	
+}
 
 ```
