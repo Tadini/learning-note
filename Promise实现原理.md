@@ -26,8 +26,12 @@ const Promise = function Promise (exectuor) {
 	}
 }
 
-Promise.prototype.then = function (resolve = function () {}, rejected = function () {}) {
-	this.resolveCallbacks.push(resolve
+Promise.prototype.then = function (onResolve = function () {}, onReject = function () {}) {
+	this.resolveCallbacks.push(onResolve)
+	this.rejectCallbacks.push(rejected);
+
+	return new Promise(function () {
+	})
 }
 
 ```
