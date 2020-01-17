@@ -6,12 +6,14 @@ const Promise = function Promise (exectuor) {
 	this.resolveCallbacks = [];
 	// 执行异常回调完成的操作集合
 	this.rejectCallbacks = [];
-	// 接受胡
+	// 接受数据
 	this.data = null;
 	let resolve = (value) => {
 		if (this.status === 'pending') {
 			this.status = 'resolved';
-			for(let i =0;)
+			for(let i =0, len = this.resolveCallbacks.length; i < len; i++) {
+				this.resolveCallbacks[i]();
+			}
 		}
 	}
 	try {
