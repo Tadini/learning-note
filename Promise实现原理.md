@@ -1,5 +1,5 @@
 ```
-const Promise = function Promise (resolve, reject) {
+const Promise = function Promise (exectuor) {
 	
 }
 
