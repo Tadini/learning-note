@@ -31,7 +31,8 @@ Promise.prototype.then = function (onResolve = function () {}, onReject = functi
 	this.rejectCallbacks.push(onReject);
 
 	return new Promise((resolve,  reject) => {
-		if (this.status === )
+		if (this.status === 'resolved') {}
+		if (this.status === 'rejected') {}
 	})
 }
 
