@@ -10,7 +10,8 @@ const Promise = function Promise (exectuor) {
 	this.data = null;
 	let resolve = (value) => {
 		if (this.status === 'pending') {
-			
+			this.status = 'resolved';
+			for(let i =0;)
 		}
 	}
 	try {
