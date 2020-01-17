@@ -5,7 +5,16 @@ const Promise = function Promise (exectuor) {
 	// 执行正常回调完成的操作集合 参考jq的on方法
 	this.resolveCallbacks = [];
 	// 执行异常回调完成的操作集合
-	this.rejectCallbacks = [
+	this.rejectCallbacks = [];
+	resolve = 
+	try {
+	
+		setTimeout(function(){
+			executor(resolve, reject);
+		})
+	} catch(e) {
+	
+	}
 }
 
 ```
