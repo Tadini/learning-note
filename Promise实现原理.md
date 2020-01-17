@@ -28,9 +28,10 @@ const Promise = function Promise (exectuor) {
 
 Promise.prototype.then = function (onResolve = function () {}, onReject = function () {}) {
 	this.resolveCallbacks.push(onResolve)
-	this.rejectCallbacks.push(rejected);
+	this.rejectCallbacks.push(onReject);
 
-	return new Promise(function () {
+	return new Promise((resolve,  reject) => {
+		if (this.status === )
 	})
 }
 
